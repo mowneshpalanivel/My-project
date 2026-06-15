@@ -4,125 +4,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-    <title>Mownesh Portfolio</title>
-
-    <meta name="description" content="Portfolio of Mownesh, Web Developer skilled in HTML, CSS and JavaScript">
-    <meta name="keywords" content="Portfolio, Web Developer, HTML, CSS, JavaScript">
-    <meta name="author" content="Mownesh">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
 
-    <nav class="navbar" aria-label="Main Navigation">
-
-        <div class="container nav-container">
-
-            <h2 class="logo">Mownesh Portfolio</h2>
+            <h2>Portfolio</h2>
 
             <ul class="nav-links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-        </div>
+            <button id="themeBtn" class="btn">Theme</button>
+        </nav>
+    </header>
 
-    </nav>
-
-</header>
-
-<main>
-
-    <section class="container hero-section" aria-labelledby="hero-title">
-
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="hero-image">
-            <img src="mownesh_img.png"
-                 alt="Photo of Mownesh"
-                 class="profile-img">
+            <img src="mownesh_img.png" alt="Profile Image">
         </div>
-
         <div class="hero-content">
-
-            <h1 id="hero-title">Mownesh</h1>
-
-            <h2>Web Developer</h2>
-
+            <h1>Hello, I'm <span>Mownesh</span></h1>
             <p>
-                Passionate Web Developer skilled in HTML, CSS and JavaScript.
+                Front-End Developer passionate about building
+                responsive and user-friendly websites.
             </p>
 
-            <a href="resume.pdf"
-               download
-               class="btn"
-               aria-label="Download Resume">
-                Download Resume
-            </a>
+            <br>
+
+            <button class="btn">
+                <a href="resume.pdf"  class="btntag" download>
+                Download Resume</a>
+            </button>
+        </div>
+
+       
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+        <br>
+
+        <div class="about-container">
+
+            <div class="about-card">
+                <h3>Education</h3>
+                <p>B.E Computer Science Engineering</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Who Am I?</h3>
+                <p>
+                    I am a web developer with knowledge of HTML,
+                    CSS and JavaScript I enjoy creating
+                    modern responsive websites.
+                </p>
+            </div>
 
         </div>
 
     </section>
 
-    <section class="container section">
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
 
-        <article class="card3d">
+        <h2 align="center">Skills</h2>
+        <br>
 
-            <h2>Skills</h2>
+        <div class="skills-grid">
 
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-            </ul>
+            <div class="skill-card">
+                <h3>HTML5</h3>
+            </div>
 
-        </article>
+            <div class="skill-card">
+                <h3>CSS3</h3>
+            </div>
 
-    </section>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+            </div>
 
-    <section class="container section">
+           
 
-        <article class="card3d">
-
-            <h2>Connect With Me</h2>
-
-            <p>
-                LinkedIn:
-                <a
-                href="https://www.linkedin.com/in/mownesh-p-s-14883b37b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                target="_blank"
-                rel="noopener"
-                class="social-btn linkedin"
-                aria-label="Visit LinkedIn Profile">
-                View Profile
-                </a>
-            </p>
-
-            <p>
-                GitHub:
-                <a
-                href="https://github.com/mowneshpalanivel"
-                target="_blank"
-                rel="noopener"
-                class="social-btn github"
-                aria-label="Visit GitHub Profile">
-                View Profile
-                </a>
-            </p>
-
-        </article>
+        </div>
 
     </section>
 
-</main>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
 
-<footer>
-    <p>&copy; 2026 Mownesh Portfolio</p>
-</footer>
+        <h2 align="center">Projects</h2>
+        <br>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="mownesh_portfolio.png" alt="Project 1">
+
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio using HTML, CSS and JS.</p>
+                </div>
+            </div>
+
+           
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2 align="center">Contact Me</h2>
+        <br>
+
+        <form class="contact-container">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mownesh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const btn = document.getElementById("themeBtn");
+
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("light-theme");
+        });
+    </script>
 
 </body>
+
 </html>
