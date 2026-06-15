@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+
+            <h2>Portfolio</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="themeBtn" class="btn">Theme</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-image">
+            <img src="mownesh_img.png" alt="Profile Image">
+        </div>
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Mownesh</span></h1>
+            <p>
+                Front-End Developer passionate about building
+                responsive and user-friendly websites.
+            </p>
+
+            <br>
+
+            <button class="btn">
+                <a href="resume.pdf"  class="btntag" download>
+                Download Resume</a>
+            </button>
+        </div>
+
+       
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+        <br>
+
+        <div class="about-container">
+
+            <div class="about-card">
+                <h3>Education</h3>
+                <p>B.E Computer Science Engineering</p>
+            </div>
+
+            <div class="about-card">
+                <h3>Who Am I?</h3>
+                <p>
+                    I am a web developer with knowledge of HTML,
+                    CSS and JavaScript I enjoy creating
+                    modern responsive websites.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+
+        <h2 align="center">Skills</h2>
+        <br>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>HTML5</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS3</h3>
+            </div>
+
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+            </div>
+
+           
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+
+        <h2 align="center">Projects</h2>
+        <br>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="mownesh_portfolio.png" alt="Project 1">
+
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Responsive portfolio using HTML, CSS and JS.</p>
+                </div>
+            </div>
+
+           
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2 align="center">Contact Me</h2>
+        <br>
+
+        <form class="contact-container">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mownesh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const btn = document.getElementById("themeBtn");
+
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("light-theme");
+        });
+    </script>
+
+</body>
+
+</html>
